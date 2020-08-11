@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+<title>タイトル</title>
+</head>
+<body>
+<div th:include="header :: header_part"></div>
+ <h1 th:if="${suzuki}">ようこそ鈴木java五郎さん！</h1>
+ <h1 th:text="${name}"></h1>
+ <form action"/" method="POST">
+ <h2>鈴木java五郎さんですか？</h2>
+  <input type="radio" name="gender" value="male"><label>男性</label>
+  <input type="radio" name="gender" value="female"><label>女性</label>
+  <input type="radio" name="gender" value="others"><label>その他</label>
+ <input type="submit", value="送信"> 
+ </form>
+</body>
+</html>
